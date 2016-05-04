@@ -9,7 +9,8 @@ var express = require('express')
   , path = require('path')
   , admin = require('./routes/admin')
   , login = require('./routes/login')
-  , alert = require('./routes/alert');
+  , alert = require('./routes/alert')
+  , boarding = require('./routes/boarding');
 
 //JUST FOR PASSPORT LOGIN
 var passport = require('passport');
@@ -63,6 +64,16 @@ if ('development' == app.get('env')) {
 //GET REQUEST
 app.get('/', isAuthenticated, admin.home);
 app.get('/users', user.list);
+
+app.get('/boarding/add', boarding.addPage);
+app.post('/boarding/reg', boarding.add);
+
+app.get('/boarding/pass', boarding.passPage);
+
+app.get('/boarding/remove', boarding.removePage);
+app.post('/boarding/remove', boarding.removePass);
+
+app.post('/boarding', boarding.info);
 
 app.get('/login', login.signIn);
 app.get('/signup', login.signUp);

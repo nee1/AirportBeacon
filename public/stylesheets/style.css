@@ -2,6 +2,11 @@ body {
   /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
   font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
+
+.pass, .pass thead th{
+	text-align: center;
+}
+
 a{
 	text-decoration: none;
 	color: inherit;
