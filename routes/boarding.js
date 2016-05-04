@@ -40,10 +40,11 @@ exports.passPage = function(req, res){
 
 	Boarding.find({}, function(err, passengers){
 		console.log(passengers);
+		
 		res.render('boarding-pass',{user: req.session.user, passengers: passengers});
+
 	});
 }
-
 exports.removePage = function(req, res){
 	console.log('add');
 
@@ -62,7 +63,11 @@ exports.removePass = function(req, res){
 
 exports.info = function(req, res){
 	console.log(req.param('id'));
-	Boarding.findOne({conf: req.param('id')}, function(err, info){
-		res.end(JSON.stringify(info));
-	})
+	var data = {feed:[]},feed;
+	Boarding.findOne({conf: req.param('id')}, function(err, feed){
+		data.feed.push(feed);	
+		//data.push(feed);
+		console.log(data);
+		res.send(data);
+	});
 }

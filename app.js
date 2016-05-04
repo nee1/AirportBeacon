@@ -73,7 +73,7 @@ app.get('/boarding/pass', boarding.passPage);
 app.get('/boarding/remove', boarding.removePage);
 app.post('/boarding/remove', boarding.removePass);
 
-app.post('/boarding', boarding.info);
+app.get('/boarding', boarding.info);
 
 app.get('/login', login.signIn);
 app.get('/signup', login.signUp);
