@@ -186,3 +186,6 @@ SSH
 .cache
 .gitconfig
 .bash_logout
+.viminfo
+.mongorc.js
+.profile
