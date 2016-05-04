@@ -117,8 +117,8 @@ exports.getAlerts = function(req, res){
 				//ctx.fillRect(10,10,130,130);
 				//ctx.strokeRect(50,50,50,50);
 
-				var out = fs.createWriteStream(__dirname + '/gradients.png')
-				  , stream = canvas.createPNGStream();
+				var out = fs.createWriteStream(__dirname + '/../public/gradients.png')
+						  , stream = canvas.createPNGStream();
 
 				stream.on('data', function(chunk){
 				  out.write(chunk);
@@ -243,7 +243,8 @@ exports.editAlert = function(req, res){
 						//ctx.fillRect(10,10,130,130);
 						//ctx.strokeRect(50,50,50,50);
 
-						var out = fs.createWriteStream(__dirname + '/gradients.png')
+
+						var out = fs.createWriteStream(__dirname + '/../public/gradients.png')
 						  , stream = canvas.createPNGStream();
 
 						stream.on('data', function(chunk){
@@ -284,6 +285,7 @@ exports.createAlert = function(req,res){
 				res.send(resGen.responseGenerator(400,null));
 			}
 			else{
+
 				res.send(resGen.responseGenerator(200,result));
 			}			
 		}
