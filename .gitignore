@@ -1,4 +1,5 @@
-lt application files
+
+
 *.apk
 *.ap_
 
@@ -188,4 +189,7 @@ SSH
 .bash_logout
 .viminfo
 .mongorc.js
-.profile.npm
+
+.profile
+.npm
+
