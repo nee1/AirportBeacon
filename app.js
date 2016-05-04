@@ -77,6 +77,7 @@ app.post('/boarding', boarding.info);
 
 app.get('/login', login.signIn);
 app.get('/signup', login.signUp);
+app.post('/signup',login.regUser);
 app.get('/logout', function(req,res) {
   req.session.destroy(function(err){
     res.redirect('/');

@@ -134,9 +134,9 @@
 								
 								<table class="table table-bordered table-hover table-condensed">
   
-									<tr  ng-repeat="alert in alerts">
+									<tr  ng-repeat="alert in alerts" >
 										<td><h4>Alert at : 
-											<span editable-select="alert.beacon" e-name="name" e-form="rowform" e-ng-options="s.value as s.text for s in beacons" e-required>
+											<span editable-select="alert.beacon" e-name="beacon" e-form="rowform" e-ng-options="s.value as s.text for s in beacons" e-required>
 									          {{ showBeacon(alert.beacon) }}
 									        </span>
 									        </h4>
@@ -157,7 +157,7 @@
 										</td>
 										<td>
 											<h4>Alert type: 
-												<span editable-select="alert.alert_type" e-name="type" e-form="rowform" e-ng-options="s.value as s.text for s in alert_types" e-required>
+												<span editable-select="alert.alert_type" e-name="alert_type" e-form="rowform" e-ng-options="s.value as s.text for s in alert_types" e-required>
 													{{ showAlertType(alert) }}
 												</span>
 											</h4>
