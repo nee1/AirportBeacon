@@ -175,3 +175,14 @@ $RECYCLE.BIN/
 *.lnk
 
 
+.ssh
+.npm
+node_modules
+SSH
+.bashrc
+.dbshell
+.profile
+.viminfo
+.cache
+.gitconfig
+.bash_logout
