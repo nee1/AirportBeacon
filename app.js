@@ -74,7 +74,8 @@ app.get('/logout', function(req,res) {
 
 app.get('/alert/all',alert.getAlerts);
 app.post('/alert/create',alert.createAlert);
-
+app.post('/alert/edit',alert.editAlert);
+app.post('/alert/delete',alert.deleteAlert);
 
 
 function isAuthenticated(req, res, next) {
