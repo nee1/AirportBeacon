@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gimbal-slf4j-impl">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/gimbal-slf4j-impl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
